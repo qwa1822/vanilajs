@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      body {
+        box-sizing: border-box;
+        background: linear-gradient(25deg, red, blue);
+        width: 100vw;
+        height: 100vh;
+      }
+      form {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      img {
+        z-index: 1;
+      }
+      input[type="text"] {
+        cursor: pointer;
+        border: 3px solid red;
+        outline: none;
+        border-radius: 10px;
+        transition: all 2s ease-in-out;
+      }
+      input[type="placeholder"] {
+        font-weight: bold;
+        color: black;
+      }
+
+      li {
+        list-style: none;
+        font-size: 22px;
+        font-weight: bold;
+      }
+      button {
+        background-color: red;
+        font-size: 22px;
+        transition: all 0.5s ease-in-out;
+      }
+      button:hover {
+        transform: translateX(50px);
+      }
+      input[type="submit"] {
+        background: linear-gradient(
+          136deg,
+          rgba(19, 136, 34, 0.2),
+          rgba(165, 182, 12, 0.4)
+        );
+        font-weight: bold;
+      }
+      input[type="text"]:hover {
+        background: linear-gradient(50deg, red, blue);
+
+        transform: translateX(-50px) scale(1.5);
+      }
+      .hidden {
+        display: none;
+        background-image: url();
+      }
+      h1 {
+        width: 200px;
+        height: 80px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        border: 3px solid rgba(165, 182, 12, 0.4);
+        color: white;
+        background-color: #e66465;
+        border-radius: 25px;
+        margin: 0 auto;
+        margin-bottom: 30px;
+        transition: all 1s ease-in-out;
+      }
+      h1:hover {
+        transform: rotate(360deg);
+      }
+      #weather {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin-bottom: 30px;
+      }
+
+      #weather span {
+        display: block;
+        margin-right: 10px;
+        background: linear-gradient(#e66465, #9198e5);
+        color: white;
+        transition: all 0.5s ease-in-out;
+        width: 100px;
+        height: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 25%;
+      }
+      #weather span:hover {
+        transform: translate(50px);
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Weather</h1>
+    <div id="weather">
+      <span></span>
+      <span></span>
+    </div>
+    <form id="login" action="">
+      <input
+        required
+        maxlength="15"
+        placeholder="your name Cheking!"
+        class="name"
+        type="text"
+      />
+      <input type="submit" value="Login" />
+    </form>
+    <form action="" id="todo-form">
+      <input type="text" id="todo_input" placeholder="Todo-List" />
+    </form>
+    <ul id="todo-list"></ul>
+    <h1 id="greeting" class="hidden"></h1>
+    <h2 class="Timer_Data"></h2>
+
+    <script defer src="./js/localTIme.js"></script>
+
+    <script defer src="./js/데이터.js"></script>
+    <script defer src="./js/todoList.js"></script>
+    <script defer src="./js/weather.js"></script>
+  </body>
+</html>
